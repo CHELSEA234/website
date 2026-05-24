@@ -155,22 +155,55 @@
         <table style="width:100%;border:0;border-spacing:0;border-collapse:separate;margin:0 auto;">
           <tbody>
             <h2>News:</h2>
-            <div style="max-height: 170px; overflow-y: scroll; padding: 5px; margin-bottom: 30px;">
-              <ul style="margin: 0; padding-left: 18px;">
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2026-02: Two works are accepted by CVPR26.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2026-01: Give a online lecture talk to the Vision and Language class at UNC-Chapel Hill.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-11: Defended my Ph.D. dissertation, and joined Amazon TSI as an applied scientist 🎉</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-10: Two works are accepted by WACV26.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-06: Will attend ICCV25 Doctor Consortium.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-06: One paper is accepted by ICCV25.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-03: Our <a href="https://m2f2-net.github.io/M2F2-Page/">M2F2-Det</a> is selected as an <span style="color:red; font-weight:bold;">oral presentation</span> (0.7% rate in the total submissions).</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2025-02: Our <a href="https://m2f2-net.github.io/M2F2-Page/">M2F2-Det</a> is accepted by CVPR25.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2024-12: Our <a href="https://chelsea234.github.io/Dense-Face.github.io/">DenseFace</a> is posted on ArXiv.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2024-10: Our <a href="https://github.com/CHELSEA234/HiFi_IFDL">HiFi-Net++</a> is accepted by IJCV25.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2024-09: Two works (<a href="https://github.com/SparkleXFantasy/MM-Det">MM-Det</a> and <a href="https://github.com/CHELSEA234/LGPN">LGPN</a>) are accepted by NeurIPS24.</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2024-09: Completed my internship at Amazon One!</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2023-09: Completed my internship at Amazon Alexa!</li>
-                <li style="font-size: 15px; line-height: 1.5; margin: 2px 0;">2022-05: Our ECCV22 paper is selected as an <span style="color:red; font-weight:bold;">oral presentation</span> (2.3% rate in the total submissions).</li>
+            <!-- 
+              Organized "News" section.
+              - Styling for font size, font family, line height, margin, etc. is moved to a central <style> block.
+              - Only structure and content remain in this section for easier maintenance and font updates.
+              - To change font properties for news items, just update the CSS class ".news-item" in the <style> section.
+            -->
+
+            <style>
+              /* Centralized style for News section */
+              /* Remove font-family to inherit from body and keep consistent font */
+              .news-list {
+                margin: 0;
+                padding-left: 16px;
+                /* font-family removed to inherit from parent/body for consistency */
+              }
+              .news-item {
+                font-size: 16px;
+                /* font-family: inherit; -- not needed if .news-list doesn't override it */
+                line-height: 1.5;
+                margin: 2px 0;
+              }
+              .news-scroll-box {
+                max-height: 300px;
+                overflow-y: scroll;
+                padding: 5px;
+                margin-bottom: 30px;
+              }
+              .news-highlight {
+                color: red;
+                font-size: 17px;
+                font-weight: bold;
+              }
+            </style>
+     
+            <div class="news-scroll-box">
+              <ul class="news-list">
+                <li class="news-item">2026-05: Selected for the <i><b>“Researcher on the Rise”</b></i> interview by the IEEE Biometrics Council Newsletter.</li>
+                <li class="news-item">2026-02: Two works are accepted by CVPR26.</li>
+                <li class="news-item">2026-01: Give an online lecture talk to the Vision and Language class at UNC-Chapel Hill.</li>
+                <!-- <li class="news-item">2025-11: Completed my Ph.D. and joined Amazon TSI as an applied scientist 🎉</li> -->
+                <li class="news-item">2025-10: Two works are accepted by WACV26.</li>
+                <li class="news-item">2025-06: One paper is accepted by ICCV25, and attended ICCV25 Doctor Consortium.</li>
+                <li class="news-item">2025-03: Our <a href="https://m2f2-net.github.io/M2F2-Page/">M2F2-Det</a> is selected as an <span class="news-highlight">oral presentation</span> (0.7% rate in the total submissions).</li>
+                <!-- <li class="news-item">2024-12: Our <a href="https://chelsea234.github.io/Dense-Face.github.io/">DenseFace</a> is posted on ArXiv.</li> -->
+                <li class="news-item">2024-10: Our <a href="https://github.com/CHELSEA234/HiFi_IFDL">HiFi-Net++</a> is accepted by IJCV25.</li>
+                <li class="news-item">2024-09: Two works (<a href="https://github.com/SparkleXFantasy/MM-Det">MM-Det</a> and <a href="https://github.com/CHELSEA234/LGPN">LGPN</a>) are accepted by NeurIPS24.</li>
+                <li class="news-item">2024-09: Completed my internship at Amazon One!</li>
+                <li class="news-item">2023-09: Completed my internship at Amazon Alexa!</li>
+                <li class="news-item">2022-05: Our ECCV22 paper is selected as an <span class="news-highlight">oral presentation</span> (2.3% rate in the total submissions).</li>
               </ul>
             </div>
 
@@ -294,6 +327,35 @@
               <tr>
                 <td style="padding:0;width:40%;vertical-align:middle">
                   <div class="one">
+                    <img id="ddvqa_img" src="images/FusionAgent.png" alt="FusionAgent teaser" loading="lazy" decoding="async">
+                  </div>
+                </td>
+                <td style="padding:0;width:100%;vertical-align:middle">
+                  <a href="https://arxiv.org/pdf/2402.00126">
+                    <span class="papertitle">FusionAgent: A Multimodal Agent with Dynamic Model Selection for Human Recognition</span>
+                  </a>
+                  <br>
+                  <a href="https://jiezhu23.github.io/">Jie Zhu</a>,
+                  <strong>Xiao Guo</strong>,
+                  <a href="https://cse.msu.edu/~suyiyan1/">Yiyang Su</a>,
+                  <a href="https://www.cse.msu.edu/~jain/">Anil Jain</a>,
+                  <a href="https://cs.unc.edu/person/xiaoming-liu/">Xiaoming Liu</a>
+                  <br>
+                  <em>CVPR</em>, 2026
+                  <br>
+                  <a href="https://github.com/jiezhu23/FusionAgent_CVPR26">code<img src="https://img.shields.io/github/stars/jiezhu23/FusionAgent_CVPR26?style=social" alt="GitHub stars" height="15"></a>
+                  /
+                  <a href="https://arxiv.org/pdf/2603.26908">arXiv</a>
+                  <p></p>
+                  <p>A MLLM agent to dynamically select the optimal model combination per sample, achieving robust and explainable human recognition via adaptive score fusion.</p>
+                </td>
+              </tr>
+
+              <tr><td style="padding:6px"></td></tr>
+
+              <tr>
+                <td style="padding:0;width:40%;vertical-align:middle">
+                  <div class="one">
                     <img id="ddvqa_img" src="images/DDVQA-BLIP.gif" alt="DDVQA-BLIP teaser" loading="lazy" decoding="async">
                   </div>
                 </td>
@@ -375,6 +437,30 @@
               <tr>
                 <td style="padding-left:0;width:40%;vertical-align:middle;text-align:center;">
                   <div class="one">
+                    <img id="lpgn_img" src="images/LPGN.png" alt="LGPN teaser" loading="lazy" decoding="async">
+                  </div>
+                </td>
+                <td style="padding:0;width:100%;vertical-align:middle">
+                  <a href="https://arxiv.org/pdf/2312.02224">
+                    <span class="papertitle">Tracing Hyperparameter Dependencies for Model Parsing via Learnable Graph Pooling Network</span>
+                  </a>
+                  <br>
+                  <strong>Xiao Guo</strong>,
+                  <a href="https://vishal3477.github.io/">Vishal Asnani</a>,
+                  <a href="https://lsjxjtu.github.io/"> Sijia Liu</a>,
+                  <a href="https://cvlab.cse.msu.edu/">Xiaoming Liu</a>
+                  <br>
+                  <em>NeurIPS</em>, 2024
+                  <br>
+                  <a href="https://arxiv.org/pdf/2312.02224">arXiv</a>
+                  <p></p>
+                  <p>Introduce a learnable graph pooling network for the model parsing.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-left:0;width:40%;vertical-align:middle;text-align:center;">
+                  <div class="one">
                     <img id="denseface_img" src="images/Dense-Face.png" alt="DenseFace teaser" loading="lazy" decoding="async">
                   </div>
                 </td>
@@ -443,30 +529,6 @@
                   <a href="https://github.com/CHELSEA234/SkelNet_motion_prediction">code<img src="https://img.shields.io/github/stars/CHELSEA234/SkelNet_motion_prediction?style=social" alt="GitHub stars" height="15"></a>
                   /
                   <a href="https://arxiv.org/abs/1902.07367">arXiv</a>
-                </td>
-              </tr>
-
-              <tr>
-                <td style="padding-left:0;width:40%;vertical-align:middle;text-align:center;">
-                  <div class="one">
-                    <img id="lpgn_img" src="images/LPGN.png" alt="LGPN teaser" loading="lazy" decoding="async">
-                  </div>
-                </td>
-                <td style="padding:0;width:100%;vertical-align:middle">
-                  <a href="https://arxiv.org/pdf/2312.02224">
-                    <span class="papertitle">Tracing Hyperparameter Dependencies for Model Parsing via Learnable Graph Pooling Network</span>
-                  </a>
-                  <br>
-                  <strong>Xiao Guo</strong>,
-                  <a href="https://vishal3477.github.io/">Vishal Asnani</a>,
-                  <a href="https://lsjxjtu.github.io/"> Sijia Liu</a>,
-                  <a href="https://cvlab.cse.msu.edu/">Xiaoming Liu</a>
-                  <br>
-                  <em>NeurIPS</em>, 2024
-                  <br>
-                  <a href="https://arxiv.org/pdf/2312.02224">arXiv</a>
-                  <p></p>
-                  <p>Introduce a learnable graph pooling network for the model parsing.</p>
                 </td>
               </tr>
             </table>
